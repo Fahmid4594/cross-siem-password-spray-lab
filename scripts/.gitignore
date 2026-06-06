@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.env
+
+# Windows System Files
+Thumbs.db
