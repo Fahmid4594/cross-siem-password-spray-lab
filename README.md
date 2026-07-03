@@ -21,8 +21,14 @@ spl
 index="main" action="Failed"
 | stats dc(username) as distinct_accounts, values(username) as targeted_users by source_ip
 
+<img width="958" height="476" alt="Screenshot 2026-07-02 181743" src="https://github.com/user-attachments/assets/34782165-e321-45a3-8a60-75e0adf67c8a" />
+
+
+
 Microsoft Sentinel (KQL)
 To achieve mathematical and operational parity in Microsoft Sentinel, the logic queries the Watchlist alias and maps the SPL aggregations to KQL native scalar functions (dcount and make_set). Case-insensitive string matching (=~) was applied to ensure robust parsing.
+
+<img width="959" height="476" alt="Screenshot 2026-07-03 040104" src="https://github.com/user-attachments/assets/0ad488c7-3f35-44c3-ad4d-9c1581c30e2d" />
 
 Code snippet
 _GetWatchlist("AuthEvents") 
@@ -36,4 +42,3 @@ Adversary IP: 185.22.44.10
 
 Action: The query successfully generated a distinct array of all targeted employee usernames for immediate incident response and account remediation.
 
-Splunk Verification
