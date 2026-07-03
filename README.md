@@ -17,7 +17,7 @@ The objective of this phase was to identify a threat actor executing a password 
 
 ### Splunk (SPL)
 In Splunk, the aggregation relies on `stats dc()` to calculate the distinct count and `values()` to bundle the targeted usernames into a readable array.
-spl
+spl Snipped:
 index="main" action="Failed"
 | stats dc(username) as distinct_accounts, values(username) as targeted_users by source_ip
 
@@ -30,7 +30,7 @@ To achieve mathematical and operational parity in Microsoft Sentinel, the logic 
 
 <img width="959" height="476" alt="Screenshot 2026-07-03 040104" src="https://github.com/user-attachments/assets/0ad488c7-3f35-44c3-ad4d-9c1581c30e2d" />
 
-Code snippet
+KQL snippet:
 _GetWatchlist("AuthEvents") 
 | where action =~ "failed"
 | summarize distinct_accounts = dcount(username), targeted_users = make_set(username) by source_ip
