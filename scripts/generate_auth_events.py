@@ -4,6 +4,11 @@ from faker import Faker
 from datetime import datetime, timedelta
 import random
 
+random.seed(42)
+Faker.seed(42)
+
+
+
 os.makedirs("data",exist_ok=True)
 
 fake = Faker()
@@ -27,7 +32,7 @@ for i in range(25):
     
 attack_time += timedelta(seconds=random.randint(24,68))
 success_event_id = 4624
-attacker_username = fake.user_name()
+attacker_username = "ntaylor"
 action ="Success"
     
 all_events.append([attack_time,attacker_username,attacker_ip,success_event_id,action])
