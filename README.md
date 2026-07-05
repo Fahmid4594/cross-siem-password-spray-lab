@@ -2,6 +2,7 @@
 
 **Author:** Fahmid Zaman
 **Role Target:** SOC Analyst / Cybersecurity Analyst / Junior Detection Engineer
+       
 **Tech Stack:** Python, Splunk SPL, Microsoft Sentinel KQL, Sigma, Windows Authentication Logs
 ---
 
